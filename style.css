@@ -1,0 +1,586 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #243858;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+}
+
+body {
+    min-height: 100vh;
+    overflow-X: hidden;
+    font-family: 'montserrat';
+}
+
+.navigation {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    background: var(--blue);
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigation.active {
+    width: 80px;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 200%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover {
+    background: var(--white);
+
+}
+
+.navigation ul li:nth-child(1) {
+    margin-bottom: 20px;
+    pointer-events: none;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.navigation ul li:hover a {
+    color: var(--blue);
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.navigation ul li .icon ion-icon {
+    font-size: 1.75em;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* main */
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background-color: var(--white);
+    transition: 0.5s;
+    margin-top: 5px;
+    padding: 20px;
+}
+
+.main.active {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 0 10px;
+}
+
+.toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    background-color: #ccc;
+}
+
+.search {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search label {
+    position: relative;
+    width: 100%;
+}
+
+.search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    outline: none;
+    padding-left: 35px;
+    font-size: 18px;
+    border: 1px solid var(--black2);
+}
+
+.search label ion-icon {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    font-size: 1.2em;
+}
+
+.user {
+    position: relative;
+    font-size: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* cardBox  */
+.cardBox {
+    width: 100%;
+    padding: 20px;
+}
+
+.cardBox .card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 100px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-left: 2px solid var(--blue);
+    background-color: var(--white);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* details */
+.details {
+    display: flex;
+    margin-top: 30px;
+}
+
+.details-left {
+    width: 60%;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.details-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.details-title h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--black1);
+}
+
+.details-title a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white);
+    padding: 12px 36px;
+    border-radius: 8px;
+    background-color: var(--blue);
+    transition: 0.5s;
+}
+
+.details-title a:hover {
+    background-color: var(--black1);
+}
+
+.details-table,
+#planejamento table {
+    padding: 20px;
+}
+
+.details-table table th,
+#planejamento table th {
+    width: 120px;
+    height: 40px;
+    color: var(--black1);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.details-table table td,
+#planejamento table td {
+    color: var(--black1);
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 16px;
+}
+
+.details-right {
+    width: 40%;
+    padding: 10px 20px;
+    margin-left: 30px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.details-right-title {
+    margin: 20px 0;
+}
+
+.details-right-item {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.details-photo img {
+    width: 30px;
+    height: 30px;
+}
+
+.details-description {
+    margin-left: 12px;
+}
+
+.details-description h3 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.details-description p {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.anoLetivo,
+.planejamento,
+.registroExperiencia,
+.frequenciaDiaria,
+.portifolio,
+.auxilioTransporte,
+.relatorios,
+.duvidasFrequente {
+    display: none;
+}
+
+.anoLetivo,
+.planejamento {
+    width: 100%;
+    padding: 20px;
+    border-top: 4px solid var(--blue);
+    border-left: 1px solid var(--grey);
+    border-right: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.form-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-icon ion-icon {
+    font-size: 30px;
+    height: 20px;
+    color: var(--white);
+    font-weight: 700;
+    margin-right: 20px;
+    padding: 4px;
+    background-color: var(--blue);
+    border-radius: 4px;
+}
+
+form .form-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--blue);
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+form label {
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+form label::after {
+    content: '*';
+    font-size: 14px;
+    color: #ff0000;
+    margin-left: 4px;
+}
+
+form select {
+    width: 80%;
+    height: 36px;
+    outline: none;
+    border-color: #ccc;
+    border-radius: 4px;
+}
+
+form option {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black1);
+}
+
+form button {
+    padding: 8px 34px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid var(--blue);
+    margin-left: 4px;
+    transition: 0.5s;
+}
+
+form button:hover {
+    background-color: var(--black1);
+    border: 1px solid var(--blue);
+    cursor: pointer;
+}
+
+.form-group {
+    display: flex;
+
+}
+
+.form-control input {
+    width: 200px;
+    height: 36px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.form-control select {
+    width: 200px;
+    height: 36px;
+    margin: 0 36px;
+}
+
+.btn-planejamento {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 0;
+}
+
+/* .btn-planejamento ion-icon{
+    font-size: 16px;
+    margin-top: 2px;
+    color: var(--white);
+} */
+.btn-planejamento button {
+    padding: 8px 34px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid var(--blue);
+    margin-left: 4px;
+    transition: 0.5s;
+}
+
+.btn-planejamento button:hover {
+    background-color: var(--black1);
+    border: 1px solid var(--blue);
+    cursor: pointer;
+}
+
+/* Modal Planejamento */
+.modal-planejamento {
+    position: relative;
+    top: -300px;
+    width: 100%;
+    min-height: 300px;
+    padding: 20px;
+    border-top: 4px solid var(--blue);
+    border-left: 1px solid var(--grey);
+    border-right: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: var(--white);
+}
+
+.modal-planejamento-title {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.modal-planejamento-title-item {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+.modal-planejamento-title-icon ion-icon {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    padding: 8px;
+    background-color: var(--blue);
+    margin-right: 8px;
+    border-radius: 4px;
+}
+
+.modal-planejamento-inputis {
+    padding: 20px 0;
+}
+
+.modal-planejamento-inputis label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--black1);
+}
+
+.modal-planejamento-inputis input {
+    width: 300px;
+    height: 26px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+
+.modal-planejamento-descriptions {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--black1);
+}
+
+.modal-planejamento-btn {
+    display: flex;
+    padding: 30px 0;
+}
+
+.modal-planejamento-btn button {
+    background-color: transparent;
+    color: var(--black1);
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    margin: 0 10px;
+}
+
+.modal-planejamento-btn button:hover {
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    color: var(--white);
+}
+
+.modal-planejamento-box {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+}
+
+/* fim Modal Pesquisa Planejamento */
+
+/* modal planejamento botoes */
+.modal-planejamento-turma,
+.modal-planejamento-camposExperiencias,
+.modal-planejamento-oad,
+.modal-planejamento-organizacaoExperiencia {
+    display: none;
+}
+
+.form-group-planejamento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group-planejamento select {
+    width: 300px;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.form-control-icon ion-icon {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    padding: 8px;
+    background-color: var(--blue);
+}
+
+.turmasSelecionadas {
+    padding: 30px 0;
+}
+
+.turmasSelecionadas input {
+    width: 100%;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+
+.fomr-control-planejamento {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-control textarea {
+    border-color: #ccc;
+    outline: none;
+}
+
+/* fim modal planejamento botoes */
