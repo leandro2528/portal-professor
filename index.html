@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Portal do Professor</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="at-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">PORTAL PROFESSOR</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </span>
+                        <span onclick="anoLetivo()" class="title">Ano letivo</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                        </span>
+                        <span onclick="planejamento()" class="title">Planejamento</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </span>
+                        <span onclick="registroExperiencia()" class="title">Registro de Experiências</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="file-tray-full-outline"></ion-icon>
+                        </span>
+                        <span onclick="frequenciaDiaria()" class="title">Frequência Diária</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="attach-outline"></ion-icon>
+                        </span>
+                        <span onclick="portifolio()" class="title">Portifólio</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="cash-outline"></ion-icon>
+                        </span>
+                        <span onclick="auxilioTransporte()" class="title">Auxílio Transporte</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="id-card-outline"></ion-icon>
+                        </span>
+                        <span onclick="relatorios()" class="title">Relatórios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="bulb-outline"></ion-icon>
+                        </span>
+                        <span onclick="duvidasFrequente()" class="title">Dúvidas Frequente</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <div class="search">
+                    <label for="">
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                    <div class="cardItem">
+                        <div class="cardNumber">1,504</div>
+                        <div class="cardTitle">Daily Views</div>
+                        <div class="cardIcon">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="cardItem">
+                        <div class="cardNumber">80</div>
+                        <div class="cardTitle">Sales</div>
+                        <div class="cardIcon">
+                            <ion-icon name="card-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="cardItem">
+                        <div class="cardNumber">285</div>
+                        <div class="cardTitle">Commeents</div>
+                        <div class="cardIcon">
+                            <ion-icon name="chatbubbles-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="cardItem">
+                        <div class="cardNumber">$7,842</div>
+                        <div class="cardTitle">Earning</div>
+                        <div class="cardIcon">
+                            <ion-icon name="cash-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="details-left">
+                        <div class="details-title">
+                            <h2>Detalhes de Ordem</h2>
+                            <a href="#">Ver Detalhes</a>
+                        </div>
+                        <div class="details-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Aluno</th>
+                                        <th>Turma</th>
+                                        <th>Turno</th>
+                                        <th>Ano</th>
+                                        <th>Nota</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Aluno um</td>
+                                        <td>A</td>
+                                        <td>Manhã</td>
+                                        <td>2022</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aluno um</td>
+                                        <td>A</td>
+                                        <td>Manhã</td>
+                                        <td>2022</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aluno um</td>
+                                        <td>A</td>
+                                        <td>Manhã</td>
+                                        <td>2022</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aluno um</td>
+                                        <td>A</td>
+                                        <td>Manhã</td>
+                                        <td>2022</td>
+                                        <td>8</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="details-right">
+                        <div class="details-right-title">
+                            <h2>Professores</h2>
+                        </div>
+                        <div class="details-right-user">
+                            <div class="details-right-item">
+                                <div class="details-photo">
+                                    <img src="{{ asset('images/images.jfif') }}" alt="">
+                                </div>
+                                <div class="details-description">
+                                    <h3>Professor 1</h3>
+                                    <p>Descrição / Materia</p>
+                                </div>
+                            </div>
+                            <div class="details-right-item">
+                                <div class="details-photo">
+                                    <img src="{{ asset('images/images.jfif') }}" alt="">
+                                </div>
+                                <div class="details-description">
+                                    <h3>Professor 1</h3>
+                                    <p>Descrição / Materia</p>
+                                </div>
+                            </div>
+                            <div class="details-right-item">
+                                <div class="details-photo">
+                                    <img src="{{ asset('images/images.jfif') }}" alt="">
+                                </div>
+                                <div class="details-description">
+                                    <h3>Professor 1</h3>
+                                    <p>Descrição / Materia</p>
+                                </div>
+                            </div>
+                            <div class="details-right-item">
+                                <div class="details-photo">
+                                    <img src="{{ asset('images/images.jfif') }}" alt="">
+                                </div>
+                                <div class="details-description">
+                                    <h3>Professor 1</h3>
+                                    <p>Descrição / Materia</p>
+                                </div>
+                            </div>
+                            <div class="details-right-item">
+                                <div class="details-photo">
+                                    <img src="{{ asset('images/images.jfif') }}" alt="">
+                                </div>
+                                <div class="details-description">
+                                    <h3>Professor 1</h3>
+                                    <p>Descrição / Materia</p>
+                                </div>
+                            </div>
+                            <div class="details-right-item">
+                                <div class="details-photo">
+                                    <img src="{{ asset('images/images.jfif') }}" alt="">
+                                </div>
+                                <div class="details-description">
+                                    <h3>Professor 1</h3>
+                                    <p>Descrição / Materia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="anoLetivo">
+                <form action="">
+                    <div class="form-title">Selecione um Ano Letivo</div>
+                    <label>Ano Letivo</label>
+                    <select>
+                        <option></option>
+                        <option> Selecione</option>
+                        <option> Ano 2022</option>
+                        <option> Ano 2023</option>
+                        <option> Ano 2024</option>
+                    </select>
+                    <button>Confirmar</button>
+                </form>
+            </div>
+            <div id="planejamento">
+                <div class="planejamento">
+                    <form action="" method="POST">
+                        <div class="form-title">
+                            <div class="content-title">Pesquisa::Planejamento</div>
+                            <div class="content-icon">
+                                <ion-icon onclick="modalPlanejamento()" name="add-outline"></ion-icon>
+                                <ion-icon name="funnel-outline"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-control">
+                                <label>Data</label>
+                                <input type="date" name="data">
+                            </div>
+                            <div class="form-control">
+                                <label>Competência</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Janeiro</option>
+                                    <option> Fevereiro</option>
+                                    <option> Março</option>
+                                    <option> Abril</option>
+                                    <option> Maio</option>
+                                    <option> Jonho</option>
+                                    <option> Julho</option>
+                                    <option> Agosto</option>
+                                    <option> Setembro</option>
+                                    <option> Novembro</option>
+                                    <option> Dezembro</option>
+                                </select>
+                            </div>
+                            <div class="form-control">
+                                <label>Escola</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Escola 1</option>
+                                    <option> Escola 2</option>
+                                    <option> Escola 3</option>
+                                </select>
+                            </div>
+                            <div class="form-control">
+                                <label>Turma</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Turma 1</option>
+                                    <option> Turma 2</option>
+                                    <option> Turma 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="btn-planejamento">
+                            <button>
+                                <ion-icon name="search-outline"></ion-icon>
+                                <span>Buscar</span>
+                            </button>
+                            <button>Limpar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="modal-planejamento">
+                <form action="">
+                    <div class="modal-planejamento-title">
+                        <div class="modal-planejamento-title-item">
+                            Cadastrar::Planejamento
+                        </div>
+                        <div class="modal-planejamento-title-icon">
+                            <ion-icon name="save-outline"></ion-icon>
+                            <ion-icon name="search-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="modal-planejamento-inputis">
+                        <label>Data</label>
+                        <input type="date" name="data">
+                    </div>
+                    <div class="modal-planejamento-descriptions">
+                        <p>Direitos de aprendizagem e desenvolvimento</p>
+                        <p>Conviver, Brincar, Explorar, Participar, Expressar, Conhecer-se.</p>
+                    </div>
+                    <div class="modal-planejamento-btn">
+                        <button onclick="turma()">Turma</button>
+                        <button onclick="camposExperiencias()">Campos de Experiências</button>
+                        <button onclick="oad()">OAD</button>
+                        <button onclick="organizacaoExperiencia()">Organização de Experiência</button>
+                    </div>
+                    <div class="modal-planejamento-turma">
+                        <form action="">
+                            <div class="form-group-planejamento">
+                                <div class="form-control">
+                                    <label>Escola</label>
+                                    <select>
+                                        <option>Selecione</option>
+                                        <option>Escola 1</option>
+                                        <option>Escola 2</option>
+                                    </select>
+                                </div>
+                                <div class="form-control">
+                                    <label>Turma</label>
+                                    <select>
+                                        <option>Selecione</option>
+                                        <option>Turma 1</option>
+                                        <option>Turma 2</option>
+                                    </select>
+                                </div>
+                                <div class="form-control-icon">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <div class="turmasSelecionadas">
+                                <label>Turmas Selecionadas</label>
+                                <input type="text" name="nome" placeholder="Nome">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-planejamento-camposExperiencias">
+                        <form action="">
+                            <div class="form-group-planejamento">
+                                <div class="form-control">
+                                    <label>Campos de Experiências</label>
+                                    <select>
+                                        <option>Selecione</option>
+                                        <option>Campo de experiência 1</option>
+                                        <option>Campo de experiência 2</option>
+                                    </select>
+                                </div>
+                                <div class="form-control-icon">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <div class="turmasSelecionadas">
+                                <label>Campos Selecionados</label>
+                                <input type="text" name="nome" placeholder="Nome">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-planejamento-oad">
+                        <form action="">
+                            <div class="form-group-planejamento">
+                                <div class="form-control">
+                                    <label>OAD</label>
+                                    <select>
+                                        <option>Selecione</option>
+                                        <option>OAD 1</option>
+                                        <option>OAD 2</option>
+                                    </select>
+                                </div>
+                                <div class="form-control-icon">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <div class="turmasSelecionadas">
+                                <label>OAD Selecionadas</label>
+                                <input type="text" name="nome" placeholder="Nome">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-planejamento-organizacaoExperiencia">
+                        <form action="">
+                            <div class="fomr-control-planejamento">
+                                <div class="form-control">
+                                    <label>Acolhida</label>
+                                    <textarea name="" id="" cols="50" rows="5"></textarea>
+                                </div>
+                                <div class="form-control">
+                                    <label>Roda e Historia / Conversa</label>
+                                    <textarea name="" id="" cols="50" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="fomr-control-planejamento"></div>
+                        </form>
+                    </div>
+                </form>
+            </div>
+
+            <div id="registroExperiencia">
+                <div class="registroExperiencia">
+                    <form action="">
+                        <div class="form-title">Pesquisar::Registro de Experiencia</div>
+                        <div class="form-group">
+                            <div class="form-control">
+                                <label>Data</label>
+                                <input type="date" name="data">
+                            </div>
+                            <div class="form-control">
+                                <label>Competência</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Janeiro</option>
+                                    <option> Fevereiro</option>
+                                    <option> Março</option>
+                                    <option> Abril</option>
+                                    <option> Maio</option>
+                                    <option> Jonho</option>
+                                    <option> Julho</option>
+                                    <option> Agosto</option>
+                                    <option> Setembro</option>
+                                    <option> Novembro</option>
+                                    <option> Dezembro</option>
+                                </select>
+                            </div>
+                            <div class="form-control">
+                                <label>Escola</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Escola 1</option>
+                                    <option> Escola 2</option>
+                                    <option> Escola 3</option>
+                                </select>
+                            </div>
+                            <div class="form-control">
+                                <label>Turma</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Turma 1</option>
+                                    <option> Turma 2</option>
+                                    <option> Turma 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="btn-registroExperiencia">
+                            <button>
+                                <ion-icon name="search-outline"></ion-icon>
+                                <span>Buscar</span>
+                            </button>
+                            <button>Limpar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div id="frequenciaDiaria">
+                <div class="frequenciaDiaria">
+                    <form action="">
+                        <div class="form-title">Pesquisar::frequencia Diária</div>
+                        <div class="form-group">
+                            <div class="form-control">
+                                <label>Data</label>
+                                <input type="date" name="data">
+                            </div>
+                            <div class="form-control">
+                                <label>Competência</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Janeiro</option>
+                                    <option> Fevereiro</option>
+                                    <option> Março</option>
+                                    <option> Abril</option>
+                                    <option> Maio</option>
+                                    <option> Jonho</option>
+                                    <option> Julho</option>
+                                    <option> Agosto</option>
+                                    <option> Setembro</option>
+                                    <option> Novembro</option>
+                                    <option> Dezembro</option>
+                                </select>
+                            </div>
+                            <div class="form-control">
+                                <label>Escola</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Escola 1</option>
+                                    <option> Escola 2</option>
+                                    <option> Escola 3</option>
+                                </select>
+                            </div>
+                            <div class="form-control">
+                                <label>Turma</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Turma 1</option>
+                                    <option> Turma 2</option>
+                                    <option> Turma 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="btn-frequenciaDiaria">
+                            <button>
+                                <ion-icon name="search-outline"></ion-icon>
+                                <span>Buscar</span>
+                            </button>
+                            <button>Limpar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div id="portifolio">
+                <div class="portifolio">
+                    <form action="">
+                        <div class="form-title">Pesquisar::Portifólio</div>
+                        <div class="form-group">
+                            <div class="form-control">
+                                <label>Data</label>
+                                <input type="date" name="data">
+                            </div>
+                            <div class="form-control">
+                                <label>Competência</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Janeiro</option>
+                                    <option> Fevereiro</option>
+                                    <option> Março</option>
+                                    <option> Abril</option>
+                                    <option> Maio</option>
+                                    <option> Jonho</option>
+                                    <option> Julho</option>
+                                    <option> Agosto</option>
+                                    <option> Setembro</option>
+                                    <option> Novembro</option>
+                                    <option> Dezembro</option>
+                                </select>
+                            </div>
+                            <div class="form-control">
+                                <label>Escola</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Escola 1</option>
+                                    <option> Escola 2</option>
+                                    <option> Escola 3</option>
+                                </select>
+                            </div>
+                            <div class="form-control">
+                                <label>Turma</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Turma 1</option>
+                                    <option> Turma 2</option>
+                                    <option> Turma 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="btn-portifolio">
+                            <button>
+                                <ion-icon name="search-outline"></ion-icon>
+                                <span>Buscar</span>
+                            </button>
+                            <button>Limpar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="auxilioTransporte">
+                <div class="auxilioTransporte">
+                    <form action="">
+                        <div class="form-title">Pesquisar::Auxilio Transporte</div>
+                        <div class="form-group">
+                            <div class="form-control">
+                                <label>Data</label>
+                                <input type="date" name="data">
+                            </div>
+                            <div class="form-control">
+                                <label>Competência</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Janeiro</option>
+                                    <option> Fevereiro</option>
+                                    <option> Março</option>
+                                    <option> Abril</option>
+                                    <option> Maio</option>
+                                    <option> Jonho</option>
+                                    <option> Julho</option>
+                                    <option> Agosto</option>
+                                    <option> Setembro</option>
+                                    <option> Novembro</option>
+                                    <option> Dezembro</option>
+                                </select>
+                            </div>
+                            <div class="form-control">
+                                <label>Escola</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Escola 1</option>
+                                    <option> Escola 2</option>
+                                    <option> Escola 3</option>
+                                </select>
+                            </div>
+                            <div class="form-control">
+                                <label>Turma</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Turma 1</option>
+                                    <option> Turma 2</option>
+                                    <option> Turma 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="btn-auxilioTransporte">
+                            <button>
+                                <ion-icon name="search-outline"></ion-icon>
+                                <span>Buscar</span>
+                            </button>
+                            <button>Limpar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="relatorios">
+                <div class="relatorios">
+                    <form action="">
+                        <div class="form-title">Pesquisar::Relatórios</div>
+                        <div class="form-group">
+                            <div class="form-control">
+                                <label>Data</label>
+                                <input type="date" name="data">
+                            </div>
+                            <div class="form-control">
+                                <label>Competência</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Janeiro</option>
+                                    <option> Fevereiro</option>
+                                    <option> Março</option>
+                                    <option> Abril</option>
+                                    <option> Maio</option>
+                                    <option> Jonho</option>
+                                    <option> Julho</option>
+                                    <option> Agosto</option>
+                                    <option> Setembro</option>
+                                    <option> Novembro</option>
+                                    <option> Dezembro</option>
+                                </select>
+                            </div>
+                            <div class="form-control">
+                                <label>Escola</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Escola 1</option>
+                                    <option> Escola 2</option>
+                                    <option> Escola 3</option>
+                                </select>
+                            </div>
+                            <div class="form-control">
+                                <label>Turma</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Turma 1</option>
+                                    <option> Turma 2</option>
+                                    <option> Turma 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="btn-relatorios">
+                            <button>
+                                <ion-icon name="search-outline"></ion-icon>
+                                <span>Buscar</span>
+                            </button>
+                            <button>Limpar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="duvidasFrequente">
+                <div class="duvidasFrequente">
+                    <form action="">
+                        <div class="form-title">Pesquisar::Dúvidas Frequentes</div>
+                        <div class="form-group">
+                            <div class="form-control">
+                                <label>Data</label>
+                                <input type="date" name="data">
+                            </div>
+                            <div class="form-control">
+                                <label>Competência</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Janeiro</option>
+                                    <option> Fevereiro</option>
+                                    <option> Março</option>
+                                    <option> Abril</option>
+                                    <option> Maio</option>
+                                    <option> Jonho</option>
+                                    <option> Julho</option>
+                                    <option> Agosto</option>
+                                    <option> Setembro</option>
+                                    <option> Novembro</option>
+                                    <option> Dezembro</option>
+                                </select>
+                            </div>
+                            <div class="form-control">
+                                <label>Escola</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Escola 1</option>
+                                    <option> Escola 2</option>
+                                    <option> Escola 3</option>
+                                </select>
+                            </div>
+                            <div class="form-control">
+                                <label>Turma</label>
+                                <select>
+                                    <option></option>
+                                    <option> Selecione</option>
+                                    <option> Turma 1</option>
+                                    <option> Turma 2</option>
+                                    <option> Turma 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="btn-duvidasFrequente">
+                            <button>
+                                <ion-icon name="search-outline"></ion-icon>
+                                <span>Buscar</span>
+                            </button>
+                            <button>Limpar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+
+</html>
